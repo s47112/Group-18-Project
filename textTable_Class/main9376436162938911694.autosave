@@ -1,0 +1,15 @@
+Flight[] flights;
+TextTable table1;
+
+void setup() {
+  size(400,400);
+  System.out.println("r");
+  Reader r = new Reader();
+  flights = r.readIn(1, 5, "n/a"); //<>//
+  table1 = new TextTable(10, flights, 100, 100, 16, 32);
+}
+
+void draw() {
+  background(0);
+  table1.draw();
+}

@@ -4,9 +4,10 @@ class TextTable{
   int rowSize;
   int columnSize;
   int rows;
-  String[] flightData;
+  ArrayList<Flight> flightData;
+
   
-  TextTable(int tRows, String[] tFlightData, int tXPos, int tYPos, int tRowSize,
+  TextTable(int tRows, ArrayList<Flight> tFlightData, int tXPos, int tYPos, int tRowSize,
                 int tColumnSize){
     this.rows = tRows;
     this.flightData = tFlightData;
@@ -24,10 +25,11 @@ class TextTable{
     text("To", xPos +(3*columnSize), yPos);
     text("Carrier", xPos +(4*columnSize), yPos);
     for(int i = 1; i <= rows; i++){
-      text(flightData.airlineCodesAL.get(i-1) + flightData.flightNumberAL.get(i), xPos, yPos +(i*rowSize));
-      text(flightData.flightDatesAL.get(i-1), xPos + columnSize, yPos +(i*rowSize));
-      text(flightData.originCitiesAL.get(i-1), xPos +(2*columnSize), yPos +(i*rowSize));
-      text(flightData.destCitiesAL.get(i-1), xPos +(3*columnSize), yPos +(i*rowSize));
-      text(flightData.airlineCodesAL.get(i-1), xPos +(4*columnSize), yPos +(i*rowSize));
+      text(flightData.get(i-1).IATACode + flightData.get(i-1).flightNumber, xPos, yPos +(i*rowSize));
+      text(flightData.get(i-1).flightDate, xPos + columnSize, yPos +(i*rowSize));
+      text(flightData.get(i-1).originCity, xPos +(2*columnSize), yPos +(i*rowSize));
+      text(flightData.get(i-1).destinationCity, xPos +(3*columnSize), yPos +(i*rowSize));
+      text(flightData.get(i-1).IATACode, xPos +(4*columnSize), yPos +(i*rowSize));
     }
   }
+}
