@@ -35,8 +35,11 @@ class Frame {
     //Y-label
     translate(-SCREENX/2 + MARGIN/2 , SCREENY/2 + MARGIN);
     rotate(radians(-90));
-    text(labelY, MARGIN-5, SCREENY/2);
-   
+    text(labelY, MARGIN-5, SCREENY/2 - 20);
+    
+    
+    rotate(radians(90));
+    translate(-(-SCREENX/2 + MARGIN/2) , -(SCREENY/2 + MARGIN));
   }
   
   void setTitle(String title) {
