@@ -1,4 +1,5 @@
-Flight[] flights;
+import java.util.ArrayList;
+ArrayList<Flight> flights;
 
 void setup() {
   Reader r = new Reader();
