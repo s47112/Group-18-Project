@@ -1,22 +1,22 @@
-Graph graph = new Graph(DATA); //<>//
+import java.util.*; //<>//
+Graph graph;
+LinkedHashMap<String, Integer> hm = new LinkedHashMap<String, Integer>();
 void setup() {
   size(500,500);
   windowResize(SCREENX, SCREENY);
-  background(255);
   PFont font;
   font = createFont("Consolas", 128);
   textFont(font);
+  hm.put("Alaska", 100);
+  hm.put("California", 30);
+  hm.put("New York", 500);
+  hm.put("New Jersey", 100);
+  hm.put("Texas", 50);
+  graph = new Graph(hm);
 }
 
 void draw() {
   background(255);
-  
   graph.draw();
-  for(int index=0; index<DATA.length; index++) {
-    DATA[index] += 1;
-    
+
   }
-  
-  
-  graph.frame.setTitle("Hello");
-}

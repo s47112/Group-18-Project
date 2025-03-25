@@ -3,14 +3,6 @@ class Frame {
   String title = "Default title";
   String labelX = "X-axis";
   String labelY = "Y-axis";
-  //int barCount;
-  //int barGap;
-  
-  
-  
-  //  barCount = bars;
-    //barGap 
-  //}
   
   void draw() {
     //Frame
@@ -21,25 +13,26 @@ class Frame {
   
     //Labels
     textAlign(CENTER);
-    textSize(24);
+    textSize(SCREENX/25);
     
     //Title
     fill(0);
     text(title, SCREENX/2, MARGIN-5);
     
     //X-label
+    textSize(SCREENX/50);
     fill(100);
     text(labelX, SCREENX/2, SCREENY - MARGIN/5);
     
     
     //Y-label
-    translate(-SCREENX/2 + MARGIN/2 , SCREENY/2 + MARGIN);
-    rotate(radians(-90));
-    text(labelY, MARGIN-5, SCREENY/2 - 20);
+    //translate(-SCREENX/2 + MARGIN/2 , SCREENY/2 + MARGIN);
+    rotate(radians(-40));
+    text(labelY, 0, MARGIN);
     
-    
-    rotate(radians(90));
-    translate(-(-SCREENX/2 + MARGIN/2) , -(SCREENY/2 + MARGIN));
+    //reset translation and rotation
+    rotate(radians(40));
+    //translate(-(-SCREENX/2 + MARGIN/2) , -(SCREENY/2 + MARGIN));
   }
   
   void setTitle(String title) {

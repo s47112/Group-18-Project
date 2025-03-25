@@ -6,10 +6,11 @@ class Bar {
   float ypos;
   String label = "California";
    
-  Bar(float ypos, float width, float length) {
+  Bar(float ypos, float width, int length, String label) {
     this.ypos = ypos;
     this.width = width;
     this.length = length;
+    this.label = label;
   }
   
   
@@ -19,19 +20,13 @@ class Bar {
    rect(xpos, ypos, length, width);
    textAlign(RIGHT);
    fill(0);
-   int textSize = 25-(label.length());
+   int textSize = 20-(label.length() - SCREENX/500);
    
    textSize(textSize);
-   text(label, xpos - 10, ypos + textSize/3 + width/2);
+   text(label, xpos - (SCREENX/100), ypos + textSize/3 + width/2);
    textAlign(LEFT);
    textSize(25);
-   text((int)length, xpos + length + 5 , ypos + textSize/3 + width/2);
-   //rect(xpos + width + CHART_SPACING, ypos, width, -height+30);
-   //rect(xpos + 2*width + 2*CHART_SPACING, ypos, width, -height);
-   //rect(xpos + (2*width)+10, ypos, 20, -20);
+   text((int)length, xpos + length + (SCREENX/200) , ypos + textSize/3 + width/2);
  }
    
- void setLabel(String label) {
-   this.label = label;
-}
 }
