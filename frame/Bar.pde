@@ -4,13 +4,14 @@ class Bar {
   color barColour = color(255,0,0);
   float xpos = MARGIN;
   float ypos;
-  String label = "California";
+  String label;
    
-  Bar(float ypos, float width, int length, String label) {
+  Bar(float ypos, float width, int length, String label, color barColour) {
     this.ypos = ypos;
     this.width = width;
     this.length = length;
     this.label = label;
+    this.barColour = barColour:
   }
   
   
@@ -28,5 +29,7 @@ class Bar {
    textSize(25);
    text((int)length, xpos + length + (SCREENX/200) , ypos + textSize/3 + width/2);
  }
+
+ 
    
 }
