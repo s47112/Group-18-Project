@@ -17,7 +17,7 @@ class Graph {
     float ypos = MARGIN + GAP_WIDTH;
     int i = 0;
     for(Map.Entry datum : values.entrySet()) {
-      barArray[i] = new Bar(ypos, BAR_WIDTH, (int) datum.getValue(), (String) datum.getKey());
+      barArray[i] = new Bar(ypos, BAR_WIDTH, (int) datum.getValue(), (String) datum.getKey(), color(255,0,0));
       ypos += BAR_WIDTH + GAP_WIDTH;
       i++;
     }      
