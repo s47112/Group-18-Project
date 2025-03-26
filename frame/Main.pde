@@ -12,6 +12,7 @@ void setup() {
   hm.put("New York", 500);
   hm.put("New Jersey", 100);
   hm.put("Texas", 50);
+  hm.put("x", 100);
   graph = new Graph(hm);
 }
 

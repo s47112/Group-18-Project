@@ -1,7 +1,7 @@
 class Bar {
   float length;
   float width;
-  color barColour = color(255,0,0);
+  color barColour;
   float xpos = MARGIN;
   float ypos;
   String label;
@@ -11,7 +11,7 @@ class Bar {
     this.width = width;
     this.length = length;
     this.label = label;
-    this.barColour = barColour:
+    this.barColour = barColour;
   }
   
   
