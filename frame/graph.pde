@@ -1,10 +1,11 @@
  //<>//
 class Graph {
   
-  Frame frame = new Frame();
+  Frame frame;
   Bar[] barArray;
   
-  Graph(LinkedHashMap<String, Integer> values) {
+  Graph(LinkedHashMap<String, Integer> values, float multiplier) {
+    frame = new Frame(multiplier);
     
     // calculating gaps and widths, bar:gap = 3:1
     float totalGap = GRAPH_SIZE / 4;
