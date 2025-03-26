@@ -18,7 +18,7 @@ class Graph {
     float ypos = MARGIN + GAP_WIDTH;
     int i = 0;
     for(Map.Entry datum : values.entrySet()) {
-      barArray[i] = new Bar(ypos, BAR_WIDTH, (int) datum.getValue(), (String) datum.getKey(), colourArray[i % 5]);
+      barArray[i] = new Bar(ypos, BAR_WIDTH, (int) datum.getValue(), (String) datum.getKey(), colourArray[i % 5], multiplier);
       ypos += BAR_WIDTH + GAP_WIDTH;
       i++;
     }      
@@ -29,8 +29,15 @@ class Graph {
     for (Bar bar : barArray) {
       bar.draw();
     }
-    frame.setTitle("Flights to Dallas by State");
-    frame.setLabelY("State");
-    frame.setLabelX("Flights to Dallas");
+  }
+  
+  void setTitle(String title) {
+    this.frame.title = title;
+  }
+  void setLabelX(String labelX) {
+    this.frame.labelX = labelX;
+  }
+  void setLabelY(String labelY) {
+    this.frame.labelY = labelY;
   }
 }

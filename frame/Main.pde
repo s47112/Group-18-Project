@@ -1,6 +1,7 @@
 import java.util.*; //<>//
 Graph graph;
 LinkedHashMap<String, Integer> hm = new LinkedHashMap<String, Integer>();
+
 void setup() {
   size(500,500);
   windowResize(SCREENX, SCREENY);
@@ -13,11 +14,11 @@ void setup() {
   hm.put("New Jersey", 100);
   hm.put("Texas", 50);
   hm.put("x", 100);
-  graph = new Graph(hm, 50);
+  hm.put("Kentucky", 125);
+  graph = new Graph(hm, 1);
 }
 
 void draw() {
   background(255);
   graph.draw();
-
   }
