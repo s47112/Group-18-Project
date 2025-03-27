@@ -1,16 +1,8 @@
-# Group-18-Project
-Rowan, Veronika, Liam, Seamus, Aster
-AAAAAAAAAAAAAAAAA
-BBBBBBBBBBBBBBB
-CCCCCCCCCCCCCCCC
+Bar chart class.
+Pass a normalised (aster's class) LinkedHashMap<String, Integer>,
+plus the global 'multiplier' variable set by the normaliser class.
 
+Syntax:
 
-11111111111111
-22222222222222
-3333333333
-
-
-=======
-DD
-EE
+Graph myGraph = new Graph(LinkedHashMap<String, Integer> lhm, float multiplier);
 
