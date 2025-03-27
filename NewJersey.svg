@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   sodipodi:docname="NewJersey.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.52738496"
+     inkscape:cx="397.24303"
+     inkscape:cy="561.25984"
+     inkscape:window-width="1440"
+     inkscape:window-height="830"
+     inkscape:window-x="-6"
+     inkscape:window-y="-6"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-opacity:1"
+       d="m 102.53726,142.23052 1.82056,0.24274 1.12268,0.33377 1.30474,-0.0607 0.54616,0.30342 -0.54616,1.12269 -0.27309,1.2137 0.27309,0.75857 h 0.60685 l 0.69788,0.6372 0.091,1.03165 -0.57651,1.39577 0.15171,0.78891 -0.63719,0.94062 0.0607,1.09234 -0.48548,1.062 v 1.03165 l -0.45514,0.66754 -0.60686,-0.57651 -0.0303,-0.81926 -1.27439,-0.15171 -1.062,-0.57651 -0.36411,-0.66754 0.30343,-0.12137 1.48679,-2.85222 -0.27309,-1.45645 -1.75987,-0.6372 -0.0303,-1.03165 -0.36411,-0.81925 z"
+       id="path12" />
+  </g>
+</svg>
