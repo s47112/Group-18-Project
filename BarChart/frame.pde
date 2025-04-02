@@ -3,10 +3,10 @@ class Frame {
   String title = "Default title";
   String labelX = "X-axis";
   String labelY = "Y-axis";
-  float multiplier;
+  //float multiplier;
   
-  Frame(float multiplier) {
-    this.multiplier = multiplier;
+  Frame() {
+    //this.multiplier = scaling;
   }
   
   void draw() {
