@@ -1,8 +1,8 @@
 Bar chart class.
-Pass a normalised (aster's class) LinkedHashMap<String, Integer>,
-plus the global 'multiplier' variable set by the normaliser class.
+Pass a LinkedHashMap<String, Integer> and it will graph it!
 
 Syntax:
+Graph myGraph = new Graph(LinkedHashMap<String, Integer> lhm);
 
-Graph myGraph = new Graph(LinkedHashMap<String, Integer> lhm, float multiplier);
+
 

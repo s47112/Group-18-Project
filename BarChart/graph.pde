@@ -3,9 +3,20 @@ class Graph {
   
   Frame frame;
   Bar[] barArray;
+  Normaliser normaliser = new Normaliser();
+ 
+  void setTitle(String title) {
+    this.frame.title = title;
+  }
+  void setLabelX(String labelX) {
+    this.frame.labelX = labelX;
+  }
+  void setLabelY(String labelY) {
+    this.frame.labelY = labelY;
+  }
   
-  Graph(LinkedHashMap<String, Integer> values, float multiplier) {
-    frame = new Frame(multiplier);
+  Graph(LinkedHashMap<String, Integer> values) {
+    frame = new Frame();
     
     // calculating gaps and widths, bar:gap = 3:1
     float totalGap = GRAPH_SIZE / 4;
@@ -17,11 +28,18 @@ class Graph {
     barArray = new Bar[values.size()];
     float ypos = MARGIN + GAP_WIDTH;
     int i = 0;
-    for(Map.Entry datum : values.entrySet()) {
-      barArray[i] = new Bar(ypos, BAR_WIDTH, (int) datum.getValue(), (String) datum.getKey(), colourArray[i % 5], multiplier);
+    for(Map.Entry value : values.entrySet()) {
+      barArray[i] = new Bar(ypos, BAR_WIDTH, (int) value.getValue(), (String) value.getKey(), colourArray[i % 5]);
       ypos += BAR_WIDTH + GAP_WIDTH;
       i++;
-    }      
+    } 
+    i=0;
+    
+    //normalises the hashMap values and sets the length of each bar accordingly
+    for (Map.Entry normalisedLength : normaliser.normalise(lhm).entrySet()) {
+      barArray[i].setLength((int) normalisedLength.getValue());
+      i++;
+    }
   }
   
   void draw() {
@@ -31,13 +49,5 @@ class Graph {
     }
   }
   
-  void setTitle(String title) {
-    this.frame.title = title;
-  }
-  void setLabelX(String labelX) {
-    this.frame.labelX = labelX;
-  }
-  void setLabelY(String labelY) {
-    this.frame.labelY = labelY;
-  }
+  
 }
