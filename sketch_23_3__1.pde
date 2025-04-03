@@ -8,6 +8,7 @@ final int SCREENY = 800;
 PImage usa_map;
 Map<String, PImage> stateImages;
 Map<String, Integer> stateValues;
+HashMap<String, PVector> stateCoordinates = new HashMap<String, PVector>();
 
 String currentState = ""; // sgtate currently hoveres over
 int screen = 0; //tranck current scrn (0= map, 1 = other)
@@ -22,10 +23,61 @@ void setup()
 {
   //usa_map = loadImage("usa_map.png");
   
+  stateCoordinates.put("Alabama", new PVector(400,350));
+  stateCoordinates.put("Alaska", new PVector(400,350));
+  stateCoordinates.put("Arizona", new PVector(400,350));
+  stateCoordinates.put("Arkansas", new PVector(400,350));
+  stateCoordinates.put("California", new PVector(-110,180));
+  stateCoordinates.put("Colorado", new PVector(400,350));
+  stateCoordinates.put("Connecticut", new PVector(400,350));
+  stateCoordinates.put("Delaware", new PVector(400,350));
+  stateCoordinates.put("FLorida", new PVector(400,350));
+  stateCoordinates.put("Georgia", new PVector(400,350));
+  stateCoordinates.put("Hawaii", new PVector(400,350));
+  stateCoordinates.put("Idaho", new PVector(60,20));
+  stateCoordinates.put("Illinois", new PVector(400,350));
+  stateCoordinates.put("Indiana", new PVector(400,350));
+  stateCoordinates.put("Iowa", new PVector(400,350));
+  stateCoordinates.put("Kansas", new PVector(400,350));
+  stateCoordinates.put("Kentucky", new PVector(400,350));
+  stateCoordinates.put("Louisiana", new PVector(400,350));
+  stateCoordinates.put("Maine", new PVector(400,350));
+  stateCoordinates.put("Maryland", new PVector(400,350));
+  stateCoordinates.put("Massachusetts", new PVector(400,350));
+  stateCoordinates.put("Michigan", new PVector(400,350));
+  stateCoordinates.put("Minnesota", new PVector(400,350));
+  stateCoordinates.put("Mississippi", new PVector(400,350));
+  stateCoordinates.put("Missouri", new PVector(400,350));
+  stateCoordinates.put("Montana", new PVector(140,-37));
+  stateCoordinates.put("Nebraska", new PVector(400,350));
+  stateCoordinates.put("Nevada", new PVector(-60,240));
+  stateCoordinates.put("New_Hamshire", new PVector(400,350));
+  stateCoordinates.put("New_Jersey", new PVector(400,350));
+  stateCoordinates.put("New_Mexico", new PVector(400,350));
+  stateCoordinates.put("New_York", new PVector(400,350));
+  stateCoordinates.put("North_Carolina", new PVector(400,350));
+  stateCoordinates.put("North_Dakota", new PVector(60,60));
+  stateCoordinates.put("Ohio", new PVector(400,350));
+  stateCoordinates.put("Oklahoma", new PVector(400,350));
+  stateCoordinates.put("Oregon", new PVector(-27,123));
+  stateCoordinates.put("Pennsylvania", new PVector(400,350));
+  stateCoordinates.put("Rhode_Island", new PVector(400,350));
+  stateCoordinates.put("South_Carolina", new PVector(400,350));
+  stateCoordinates.put("South_Dakota", new PVector(400,350));
+  stateCoordinates.put("Tennessee", new PVector(400,350));
+  stateCoordinates.put("Texas", new PVector(400,350));
+  stateCoordinates.put("Utah", new PVector(78,150));
+  stateCoordinates.put("Vermont", new PVector(400,350));
+  stateCoordinates.put("Virginia", new PVector(400,350));
+  stateCoordinates.put("Washington", new PVector(-20,-10));
+  stateCoordinates.put("West_Virginia", new PVector(400,350));
+  stateCoordinates.put("Wisconsin", new PVector(400,350));
+  stateCoordinates.put("Wyoming", new PVector(178,138));
+  
+  
   stateImages = new HashMap<String, PImage>();
   stateImages.put("Alabama", loadImage("Alabama.png"));
   stateImages.put("Alaska", loadImage("Alaska.png"));
-  
   stateImages.put("Arizona", loadImage("Arizona.png"));
   stateImages.put("Arkansas", loadImage("Arkansas.png"));
   stateImages.put("California", loadImage("California.png"));
@@ -87,13 +139,22 @@ void setup()
 }
 
 void draw() {
-
+  
+ 
   background(255); //<>//
   //image(usa_map, 0, 0, SCREENX, SCREENY);
   
   for (String state : stateImages.keySet()) {
+    
     PImage stateImage = stateImages.get(state);
-    drawStateImage(stateImage, state, 100, 50);  // Adjusting positions needed
+    
+    PVector position = stateCoordinates.get(state);
+    
+    if(position != null)
+    {
+      drawStateImage(stateImage, state, position.x, position.y);
+    }
+    
   }
 
   if (!currentState.isEmpty())
@@ -115,7 +176,7 @@ void drawStateImage(PImage stateImage, String stateName, float xPos, float yPos)
   image(stateImage, xPos, yPos);
   noTint(); //reset tint
 
-  simplified collision detecttion
+  //simplified collision detecttion
   if (mouseOverState(stateImage, xPos, yPos))
   {
     currentState = stateName;
@@ -127,19 +188,19 @@ boolean mouseOverState(PImage stateImage, float xPos, float yPos)
   return mouseX > xPos && mouseX< xPos + stateImage.width && mouseY < yPos + stateImage.height;
 }
 
-//void displayStateInfo(String stateName)
-//{
-//  fill(0);
-//  textSize(16);
-//  text("state: " + stateName, 10, SCREENY - 30);
-//}
+void displayStateInfo(String stateName)
+{
+  fill(0);
+  textSize(16);
+  text("state: " + stateName, 10, SCREENY - 30);
+}
 
-//void mousePressed()
-//{
-//  if (!currentState.isEmpty())
-//  {
-//    //handle click event
-//    println("clicked on: " + currentState);
-//    screen = 1;// screen change
-//  }
-//}
+void mousePressed()
+{
+  if (!currentState.isEmpty())
+  {
+    //handle click event
+    println("clicked on: " + currentState);
+    screen = 1;// screen change
+  }
+}
