@@ -9,6 +9,9 @@
    id="svg1"
    inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
    sodipodi:docname="Connecticut.svg"
+   inkscape:export-filename="Connecticut.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +42,7 @@
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-opacity:1"
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.264583;stroke-opacity:1;fill-opacity:1"
        d="m 102.96945,151.73322 -1.69919,-3.12531 -0.0607,-0.84959 6.28094,-2.60948 1.03165,1.09234 0.0607,1.24405 0.36411,0.57652 -0.12137,0.36411 -1.45645,0.27308 c 0,0 -0.0299,0.78518 -0.30122,1.00664 -0.42538,0.34718 -1.64072,0.14639 -1.64072,0.14639 l -1.21371,1.45645 z"
        id="path15"
        sodipodi:nodetypes="cccccccccaccc" />
