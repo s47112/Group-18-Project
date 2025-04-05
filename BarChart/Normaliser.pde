@@ -20,6 +20,7 @@ class Normaliser {
     for (Map.Entry element : lhm.entrySet()) 
     {
       currentValue = (int) (element.getValue());
+      // Math.ceil rounds UP to the next integer.
       normalised_lhm.put((String) element.getKey(), (int) Math.ceil(currentValue * multiplier));
     }
     
