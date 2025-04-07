@@ -30,7 +30,7 @@ void setup()
   stateCoordinates.put("California", new PVector(-103,171));
   stateCoordinates.put("Colorado", new PVector(187,120));
   stateCoordinates.put("Connecticut", new PVector(681,32));
-  stateCoordinates.put("Delaware", new PVector(682,104));
+  stateCoordinates.put("Delaware", new PVector(655,98));
   stateCoordinates.put("Florida", new PVector(567,348));
   stateCoordinates.put("Georgia", new PVector(560,259));
   stateCoordinates.put("Hawaii", new PVector(220,480));
