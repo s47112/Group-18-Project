@@ -57,6 +57,7 @@ class TextTable{
     text("From", xPos +(2*columnSize) + TABLE_GAP, yPos);
     text("To", xPos +(3*columnSize) + TABLE_GAP, yPos);
     text("Carrier", xPos +(4*columnSize) + TABLE_GAP, yPos);
+    
     for(int i = index; i < rows + index; i++){
       
         if(i<= flightData.size()){
@@ -72,18 +73,18 @@ class TextTable{
       }
     
     fill(color(255));
-    rect(210, 30, 90, 30); // origin search bar 
-    rect(460, 30, 90, 30); // destination search bar
+    rect(xPos+110, yPos-70, 90, 30); // origin search bar 
+    rect(xPos+360, yPos-70, 90, 30); // destination search bar
     fill(color(0));
-    text(buttonTermOrigin, 220, 50); // origin search bar text
-    text(buttonTermDestination, 470, 50); // destination search bar text
+    text(buttonTermOrigin, xPos+120, yPos-50); // origin search bar text
+    text(buttonTermDestination, xPos +370, yPos-50); // destination search bar text
     fill(color(200,200,200));
-    rect( 310, 30, 30, 30); // origin search button
-    rect (560, 30, 30, 30); // destination search button
-  Widget buttonOrigin = new Widget(130, 35, 70, 20, "Origin City", 
+    rect( xPos+210, yPos-70, 30, 30); // origin search button
+    rect (xPos+460, yPos-70, 30, 30); // destination search button
+  Widget buttonOrigin = new Widget(xPos+30, yPos-65, 70, 20, "Origin City", 
                               HEADER_BACKGROUND, color(0), 1);
    buttonOrigin.draw();
-  Widget buttonDestination = new Widget(360, 35, 90, 20, "Destination City", HEADER_BACKGROUND, color(0), 1);
+  Widget buttonDestination = new Widget(xPos+260, yPos-65, 90, 20, "Destination City", HEADER_BACKGROUND, color(0), 1);
     buttonDestination.draw();
   if(flightData.size()>MAX_ROWS){
   Widget buttonScrollUp = new Widget(xPos + (columnSize*5) - 15, yPos + TABLE_GAP, 15, 15, "↑", 
@@ -109,12 +110,12 @@ class TextTable{
       }
       }
     }
-  if (mouseX > 210 && mouseX <= 300 && mouseY > 30 && mouseY <= 60){ // if origin search bar is clicked
+  if (mouseX > (xPos+110) && mouseX <= (xPos+200) && mouseY > (yPos-70) && mouseY <= (yPos-40)){ // if origin search bar is clicked
     canTypeOrigin = true;
   }
     else canTypeOrigin = false;
     
-  if (mouseX > 310 && mouseX <= 340 && mouseY > 30 && mouseY <= 60){ //if origin search button is pressed //<>//
+  if (mouseX > (xPos+210) && mouseX <= (xPos+240) && mouseY > (yPos-70) && mouseY <= (yPos-40)){ //if origin search button is pressed //<>//
     flightData = r.readIn(1, 0, "origin city, " + buttonTermOrigin);
     //flightData = filter1.filtering(flightData, "origin city, " + buttonTermOrigin);
     buttonTermOrigin = "";
@@ -124,12 +125,12 @@ class TextTable{
     if(flightData.size() <= MAX_ROWS)
       rows = flightData.size();
       else rows = MAX_ROWS;
-   if (mouseX > 460 && mouseX <= 550 && mouseY > 30 && mouseY <= 60){ //if destination search bar is clicked
+   if (mouseX > (xPos+360) && mouseX <= (xPos+450) && mouseY > (yPos-70) && mouseY <= (yPos-40)){ //if destination search bar is clicked
     canTypeDestination = true;
   }
     else canTypeDestination = false;
     
-  if (mouseX > 560 && mouseX <= 590 && mouseY > 30 && mouseY <= 60){ // if destination search button is clicked
+  if (mouseX > (xPos+460) && mouseX <= (xPos+490) && mouseY > (yPos-70) && mouseY <= (yPos-40)){ // if destination search button is clicked
 
     flightData = r.readIn(1, 0, "destination city, " + buttonTermDestination);
  
