@@ -13,7 +13,7 @@ class Widget {
        this.event = event;
        this.widgetColor = widgetColor;
        this.strokeColor = strokeColor;
-       labelColor = color(255,0,0);
+       labelColor = color(0,0,0);
           }
  
  void draw() {
@@ -21,6 +21,7 @@ class Widget {
    fill(widgetColor);
    rect(x,y,width,height);
    fill(labelColor);
+   textSize(12);
    text(label, x+BUTTON_GAP, y+height-BUTTON_GAP);
  }
  

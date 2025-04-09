@@ -1,22 +1,24 @@
 import java.util.ArrayList;
-ArrayList<Flight> flights;
+import java.util.Collections;
+
+ArrayList<Flight> flights, flights1;
 TextTable table1;
-//Widget buttonNumber, buttonScrollUp, buttonScrollDown; // buttonDate, buttonFrom, buttonTo, buttonCarrier;
-int rows = 40;
+Filter filter1;
+
+
 final int EVENT_NULL = 0;
-String searchTerm = "houston";
+String searchTerm = "dallas";
+
  Reader r = new Reader();
+
 void setup() {
-  size(1000,1000);
+  size(1000, 1000);
  
-  ArrayList<Flight> flights = r.readIn(1, 0, "origin city, " + searchTerm); //<>//
-  table1 = new TextTable(rows, flights, 100, 100, 16, 150);
-//  buttonNumber = new Widget(100, 30, 90, 30, "Flight Number", 
-  //                            color(126, 162, 255), color(255, 176, 0), 1);
-  //buttonScrollUp = new Widget(table1.xPos + (table1.columnSize*5) - 15, table1.yPos + table1.TABLE_GAP, 15, 15, "-", 
-    //                          color(126, 162, 255), color(255, 176, 0), 1);
-  //buttonScrollDown = new Widget(table1.xPos + (table1.columnSize*5) - 15, (table1.yPos + table1.rowSize*table1.rows) - (int)1.5*table1.TABLE_GAP, 15, 15, "+", 
-    //                          color(126, 162, 255), color(255, 176, 0), 2);
+  ArrayList<Flight> flights = r.readIn(1, 0, "n/a"); //<>//
+  int rows = flights.size();
+  table1 = new TextTable(rows, flights, 100, 100, 18, 150);
+  filter1 = new Filter();
+
 }
 
 void draw() {
