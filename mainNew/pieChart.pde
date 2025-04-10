@@ -10,7 +10,7 @@ class PieChart {
   }
   
   void draw() {
- 
+   noStroke();
     int i = 0;
     float lastAngle = 0;
     for (Map.Entry element : angles.entrySet())

@@ -78,11 +78,11 @@ class Reader{
     
     //Flight[] returnFlights = new Flight[flights.size()];
     
-    for(int i = 0; i < flights.size(); i++) {
+    //for(int i = 0; i < flights.size(); i++) {
       //returnFlights[i] = flights.get(i);
-      System.out.printf("%s%n", flights.get(i).toString());
+      //System.out.printf("%s%n", flights.get(i).toString());
       
-    } //toArray or whatever didn't work on flights arraylist so adding flights to the list with loop instead  :(
+    //} //toArray or whatever didn't work on flights arraylist so adding flights to the list with loop instead  :(
     
     return flights;
   }
